@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css' rel="stylesheet" type="text/css"/>
+    <link href='dc.css' rel="stylesheet" type="text/css"/>
+    <link href='style.css' rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.11/crossfilter.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="js/dc.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class='container'>
+        <div class="page-title">
+          <h1>Ministry of Trade and Enterprise</h1>
+          <h4>Exports for Overseas Cargo (fob NZ$) - by Country of Destination, Commodity (HS2) and Period</h4>
+        </div>
+        <div class='row'>
+          <div class="col-sm-offset-8 col-sm-4">
+            <a class="btn btn-default pull-right" href="javascript:dc.filterAll();">Reset All</a>
+          </div>
+        </div>
+        <div class='row'>
+          <div id='direction' class="col-sm-3 dc-chart">
+            <legend>Direction
+              <a class="reset" href="javascript:direction_chart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            </legend>
+          </div>
+          <div id='year' class="col-sm-9 dc-chart">
+            <legend>Year
+              <a class="reset" href="javascript:year_chart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            </legend>
+          </div>
+        </div>
+        <div class='row'>
+          <div id='country' class="col-sm-6 dc-chart">
+            <legend>Country
+              <a class="reset" href="javascript:country_chart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            </legend>
+          </div>
+          <div id='commodity' class="col-sm-6 dc-chart">
+            <legend>Commodity
+              <a class="reset" href="javascript:commodity_chart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+            </legend>
+          </div>
+        </div>
+      </div>
+      <script src="js/mote.js"></script>
+  </body>
+</html>
